@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CountryActive">
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Search "
+        android:imeOptions="actionSearch"
+        android:maxLines="1"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="4dp"
+
+        android:padding="9dp"
+        android:layout_margin="8dp"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Country_Name"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_size"
+            android:fontFamily="sans-serif"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="12dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Total_Cases"
+            android:layout_marginEnd="12dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_size"
+            android:fontFamily="sans-serif"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp" />
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/countries"
+        tools:listitem="@layout/country_item_layout"/>
+
+</LinearLayout>
